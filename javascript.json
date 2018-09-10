@@ -1,0 +1,44 @@
+{
+    "Create MySQL Connection": {
+        "prefix": "mycon",
+        "body": [
+            "const mysql = require(\"mysql\");\n",
+            "const connection = mysql.createConnection({",
+            "\thost: \"localhost\",",
+            "\tdatabase: \"$1\",",
+            "\tuser: \"root\",",
+            "\tpassword: \"root\"",
+            "});"
+        ],
+        "description": "Log output to console"
+    },
+    "Inquierer Prompt": {
+        "prefix": "inq",
+        "body": [
+            "inquierer.prompt([]).then(function (answers) {});"
+        ],
+        "description": ""
+    },
+    "Express App": {
+        "prefix": "expr",
+        "body": [
+            "var express = require(\"express\");",
+            "var app = express();",
+            "var PORT = 3000;",
+            "\n",
+            "app.listen(PORT, function() {",
+            "\tconsole.log(\"App listening on PORT \" + PORT);",
+            "});"
+        ],
+        "description": "Create Express Template"
+    },
+    "Body-parser": {
+        "prefix": "bodypar",
+        "body": [
+            "var bodyParser = require(\"body-parser\");",
+            "app.use(bodyParser.urlencoded({ extended: false }));",
+            "app.use(bodyParser.json());"
+        ],
+        "description": "Create Body-parser Template"
+    }
+}
